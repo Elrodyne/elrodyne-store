@@ -38,3 +38,12 @@
 <footer>&copy; 2025 Elrodyne. All rights reserved.</footer>
 </body>
 </html>
+<script>
+  function addToCart(name, price) {
+    const product = { name, price };
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(${name} added to cart!);
+  }
+</script>
